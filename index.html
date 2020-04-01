@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ART385 Online</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <nav>
+        <div id="courseTitle">
+            <h2>ART 385 OnLine</h2>
+            <p>Instructor: Aaron Yang</p>
+        </div>
+        
+        <ul>
+            <li class="active"><a href="">Lecture: Responsive Design</a></li>
+            <li><a href="">Adobe XD Demo 1: Hover and Component State</a></li>
+            <li><a href="">Project Demo: App Store Clone</a></li>
+        </ul>
+
+        <br>
+        <hr>
+        
+        <ul>
+            <li class="external-links"><a href="https://blackboard.ndus.edu/" target="_blank">Blackboard</a></li>
+            <li class="external-links"><a href="mailto:zhenhua.yang.1@ndsu.edu">Contact Instructor</a></li>
+        </ul>
+        <footer>&copy; Copyright 2020 Aaron Yang. All right reserved.</footer>
+    </nav>
+    <div id="signIn">
+        <h2>Please input your name and click Start button</h2>
+        <input type="text" name="" placeholder="Firstname Lastname" id="name" class="formItem textArea center">
+        <p class="hint"></p>
+        <br><br>
+        <button id="btnStart" class="formItem btn-primary center">Start</button>
+    </div>
+    <div id="cover"></div>
+    <div id="lecture">
+        <div id="videoContainer">
+            <iframe id="player" src="https://www.youtube.com/embed/JMRsNRveMtc" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script src="js/script.js"></script>    
+</body>
+
+</html>

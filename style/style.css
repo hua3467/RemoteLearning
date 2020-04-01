@@ -1,0 +1,160 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #eee;
+}
+
+/* Page layout */
+
+nav{
+    padding: 0 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #051e34;
+    color: white;
+    width: 20%;
+    min-width: 160px;
+    height: 100%;
+    z-index: 8;
+}
+#courseTitle{
+    padding-left: 20px;
+    border-bottom: 1px solid #999;
+    margin-bottom: 20px;
+    
+}
+#courseTitle p {
+    color: rgb(204, 211, 223);
+    margin-top: 4px;
+}
+#courseTitle h2 {
+    color: rgb(255, 187, 41);
+    margin-bottom: 4px;
+}
+nav ul {
+    padding-left: 20px;
+}
+
+nav li {
+    margin-top: 16px;
+    list-style: none;
+}
+nav a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+nav a:hover {
+    color: rgb(130, 121, 255);
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    color: rgb(156, 156, 156);
+    font-size: 0.8em;
+}
+.active {
+    font-weight: bold;
+}
+
+#lecture {
+    background: rgb(91, 84, 99);
+    position: absolute;
+    top: 60px;
+    left: 25%;
+    right: 60px;
+    min-width: 600px;
+    z-index: 0;
+}
+#videoContainer{
+    position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: hidden; 
+    max-width: 100%;
+}
+#videoContainer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #eee;
+}
+
+#signIn {
+    position: absolute;
+    width: auto;
+    height: 400px;
+    left: 20%;
+    right: 20%;
+    top: 60px;
+    padding: 30px;
+    min-width: 400px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    background: white;
+    z-index: 10;
+    /* visibility: hidden; */
+}
+#cover {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 9;
+    /* visibility: hidden; */
+}
+
+#signIn h2 {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.formItem {
+    height: 40px;
+    font-size: 1.4em;
+    border-radius: 6px;
+}
+#name {
+    text-align: center;
+    position: relative;
+    width: 50%;
+    min-width: 200px;
+    margin-bottom: 30px;
+    border: 1px solid #aaa;
+}
+#btnStart {
+    width: 200px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #bbb;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #bbb;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #bbb;
+  }
+
+.btn-primary{
+    height: 46px;
+    padding: 8px 0;
+    background: #999;
+    color: white;
+    border: none;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
