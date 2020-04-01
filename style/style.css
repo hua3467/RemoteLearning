@@ -95,7 +95,7 @@ footer {
     border: 1px solid #aaa;
     background: white;
     z-index: 10;
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 #cover {
     position: absolute;
@@ -106,7 +106,7 @@ footer {
     right: 0;
     background: rgba(0,0,0,0.5);
     z-index: 9;
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
 #signIn h2 {
