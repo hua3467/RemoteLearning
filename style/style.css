@@ -19,7 +19,6 @@ nav{
 }
 #courseTitle{
     padding-left: 20px;
-    border-bottom: 1px solid #999;
     margin-bottom: 20px;
     
 }
@@ -31,8 +30,13 @@ nav{
     color: rgb(255, 187, 41);
     margin-bottom: 4px;
 }
+.list-title {
+    font-size: 0.8em;
+    color: #5b7b97;
+}
 nav ul {
     padding-left: 20px;
+    border-top: 1px solid rgb(84, 84, 117);
 }
 
 nav li {
@@ -66,6 +70,9 @@ footer {
     min-width: 600px;
     z-index: 0;
 }
+#videoTitle {
+    margin-left: 25%;
+}
 #videoContainer{
     position: relative; 
     padding-bottom: 56.25%; 
@@ -95,7 +102,7 @@ footer {
     border: 1px solid #aaa;
     background: white;
     z-index: 10;
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 #cover {
     position: absolute;
@@ -106,7 +113,7 @@ footer {
     right: 0;
     background: rgba(0,0,0,0.5);
     z-index: 9;
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 
 #signIn h2 {

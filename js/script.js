@@ -3,27 +3,65 @@ const name = document.querySelector("#name");
 const signInPan = document.querySelector('#signIn');
 const player = document.querySelector('#player');
 const cover = document.querySelector('#cover');
-const menuList = document.querySelector('ul');
+const menuList = document.querySelector('#menuList');
+const archiveList = document.querySelector('#archive');
+const videoTitle = document.querySelector('#videoTitle h3');
+
 let btnFlag = false;
 let userName
 
-const lectureUrls = [
-    'https://www.youtube.com/embed/JMRsNRveMtc', //Lecture-Mobile
-    'https://www.youtube.com/embed/G8hL8ULlwY8', //Demo-Hover
-    'https://www.youtube.com/embed/8DQID1cNLT4' //Demo-Assignment
+const videos = [
+    
+    {
+        course: 'Building a Personal Webiste',
+        title: 'Creating a Design Portfolio',
+        url: 'https://www.youtube.com/embed/0cxRveJYnxo',
+        week: '14' 
+    },
+    {
+        course: 'Building a Personal Webiste',
+        title: 'Demo: Adobe Portfolio',
+        url: "https://www.youtube.com/embed/zT95t34sA-M",
+        week: '14' 
+    },
+    {
+        course: 'Building a Personal Webiste',
+        title: 'Assignment: Create Your Website',
+        url: "./assignment.html",
+        week: '14' 
+    }
 ]
 
-const videos = [{
+const archivedVideos = [
+    {
+        course: 'Responsive Design and Mobile UI',
         title: 'Lecture: Responsive Design and Mobile UI',
-        url: 'https://www.youtube.com/embed/JMRsNRveMtc'
+        url: 'https://www.youtube.com/embed/JMRsNRveMtc',
+        week: '12'
     },
     {
+        course: 'Responsive Design and Mobile UI',
         title: 'Adobe XD Demo 1: Hover and Component State',
-        url: 'https://www.youtube.com/embed/G8hL8ULlwY8'
+        url: 'https://www.youtube.com/embed/G8hL8ULlwY8',
+        week: '12'
     },
     {
+        course: 'Responsive Design and Mobile UI',
         title: 'Project Demo: App Store Clone',
-        url: 'https://www.youtube.com/embed/8DQID1cNLT4'
+        url: 'https://www.youtube.com/embed/8DQID1cNLT4',
+        week: '12'
+    },
+    {
+        course: 'Advanced Design in Adobe XD',
+        title: 'Auto Animate with Component States',
+        url: "https://www.youtube.com/embed/bM_dgrqHa9A",
+        week: '13' 
+    },
+    {
+        course: 'Advanced Design in Adobe XD',
+        title: 'Image Editing, Exporting, and Sharing',
+        url: 'https://www.youtube.com/embed/P8DmmNI0U6c',
+        week: '13' 
     }
 
 ]
@@ -42,24 +80,45 @@ firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 const dataname = 'remoteLearning'
 
+// Create Menu
 for(let i = 0; i < videos.length; i++){
-    let newLi = document.createElement('li');
-    let newA = document.createElement('a');
-    newA.innerHTML = videos[i].title;
-    newA.href = '';
-    newLi.appendChild(newA);
-    menuList.appendChild(newLi);
+    createMenu(videos[i].title, menuList);
+}
+for(let i = 0; i < archivedVideos.length; i++) {
+    createMenu(archivedVideos[i].title, archiveList);
 }
 
+// Click to Avtivate corrent video
 const menu = document.querySelectorAll('nav a');
+player.src = videos[0].url;
 
 for (let i = 0; i < videos.length; i++) {
     menu[i].addEventListener('click', function (e) {
         player.src = videos[i].url;
         e.preventDefault();
+        for (let j = 0; j < videos.length; j++) {
+            menu[j].style.fontWeight = 'normal';
+        }
+        this.style.fontWeight = 'bold';
     })
 }
 
+const archiveMenu = document.querySelectorAll('#archive a');
+for (let i = 0; i < archivedVideos.length; i++) {
+    archiveMenu[i].addEventListener('click', function (e) {
+        player.src = archivedVideos[i].url;
+        e.preventDefault();
+        for (let j = 0; j < archivedVideos.length; j++) {
+            archiveMenu[j].style.fontWeight = 'normal';
+        }
+        this.style.fontWeight = 'bold';
+    })
+}
+
+// Videos
+videoTitle.innerHTML = 'Week' + videos[videos.length-1].week + ': ' + videos[videos.length-1].course;
+
+// Sign student names
 name.addEventListener('change', function () {
     if (name.value.length < 2) {
         btnStart.style.background = '#999999';
@@ -106,4 +165,24 @@ function endTime() {
 function stopTimer() {
     timeEnd = new Date();
     timeStamp = timeEnd - timeStart;
+}
+
+function createMenu(videoTitle, list){
+    let newLi = document.createElement('li');
+    let newA = document.createElement('a');
+    newA.innerHTML = videoTitle;
+    newA.href = '';
+    newLi.appendChild(newA);
+    list.appendChild(newLi);
+}
+
+function addMenuAction(menuItem) {
+    menuItem.addEventListener('click', function (e) {
+        player.src = videos[i].url;
+        e.preventDefault();
+        for (let j = 0; j < videos.length; j++) {
+            menu[j].style.fontWeight = 'normal';
+        }
+        this.style.fontWeight = 'bold';
+    })
 }
