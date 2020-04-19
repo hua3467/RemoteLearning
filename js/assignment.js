@@ -8,7 +8,7 @@ const assignmentList= [
             'Build a personal website with any website buider.',
             'In your website, please include a home page, a list or a galley of your projects, and some introduction about yourself',
             '<b>What to Submit: </b>Please submit a link of your website to Blackboard.',
-            '<b>Here are some examples that might inspaire you: </b>'
+            '<b>Here are some examples that might inspire you: </b>'
         ],
         exampleUrls: [
             'https://www.nanwang-design.com/',
