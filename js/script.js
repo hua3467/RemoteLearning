@@ -6,6 +6,8 @@ const cover = document.querySelector('#cover');
 const menuList = document.querySelector('#menuList');
 const archiveList = document.querySelector('#archive');
 const videoTitle = document.querySelector('#videoTitle h3');
+const btnBar = document.querySelector('#btnBar');
+const nav = document.querySelector('nav');
 
 let btnFlag = false;
 let userName
@@ -88,6 +90,22 @@ for(let i = 0; i < archivedVideos.length; i++) {
     createMenu(archivedVideos[i].title, archiveList);
 }
 
+// Click to Show Menu
+let opened = false;
+btnBar.addEventListener('click', () => {
+    
+    if (opened){
+        btnBar.style.marginLeft = '16px';
+        btnBar.className = 'fa fa-bars fa-lg'
+        nav.style.visibility = 'hidden';
+    } else {
+        btnBar.style.marginLeft = '246px';
+        btnBar.className = 'fa fa-times fa-lg'
+        nav.style.visibility = 'visible';
+    }
+    opened = !opened;
+})
+
 // Click to Avtivate corrent video
 const menu = document.querySelectorAll('nav a');
 player.src = videos[0].url;
@@ -100,6 +118,7 @@ for (let i = 0; i < videos.length; i++) {
             menu[j].style.fontWeight = 'normal';
         }
         this.style.fontWeight = 'bold';
+        nav.style.visibility = 'hidden';
     })
 }
 
