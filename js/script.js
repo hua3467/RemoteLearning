@@ -100,7 +100,7 @@ btnBar.addEventListener('click', () => {
         nav.style.visibility = 'hidden';
     } else {
         btnBar.style.marginLeft = '246px';
-        btnBar.className = 'fa fa-times fa-lg'
+        btnBar.className = 'fa fa-times fa-lg';
         nav.style.visibility = 'visible';
     }
     opened = !opened;
@@ -118,7 +118,10 @@ for (let i = 0; i < videos.length; i++) {
             menu[j].style.fontWeight = 'normal';
         }
         this.style.fontWeight = 'bold';
-        nav.style.visibility = 'hidden';
+        if( window.innerWidth < 800){
+            nav.style.visibility = 'hidden';
+        } 
+        
     })
 }
 

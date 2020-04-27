@@ -25,9 +25,11 @@ nav{
 }
 
 @media screen and (max-width: 800px){
-    nav {
-        visibility: hidden;
+    nav {   
         width: 240px;
+    }
+    .nav-mobile {
+        visibility: hidden;
     }
     #btnBar {
         visibility: visible;
