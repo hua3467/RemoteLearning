@@ -1,3 +1,7 @@
+:root {
+    --border: 1px solid rgb(84, 84, 117);
+}
+
 body {
     font-family: Helvetica, Arial, sans-serif;
     background: #eee;
@@ -6,16 +10,43 @@ body {
 /* Page layout */
 
 nav{
-    padding: 0 8px;
+    padding: 0 0 0 8px;
     position: absolute;
     top: 0;
     left: 0;
+    bottom: 0;
     background: #051e34;
     color: white;
     width: 20%;
     min-width: 180px;
     height: 100%;
     z-index: 8;
+}
+
+.course-list {
+    position: absolute;
+}
+
+#menus {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: auto;
+    top: 90px;
+    bottom: 90px;
+    border-top: var(--border);
+}
+#menus::-webkit-scrollbar{
+    width: 0.5rem;
+}
+#menus::-webkit-scrollbar-track {
+    background: #042f57;
+}
+#menus::-webkit-scrollbar-thumb {
+    background: #104a7e;
+}
+.course-list:last-child {
+    bottom: 0;
+    width: 90%;
 }
 
 #btnBar {
@@ -54,7 +85,10 @@ nav{
 }
 nav ul {
     padding-left: 20px;
-    border-top: 1px solid rgb(84, 84, 117);
+    border-top: var(--border);
+}
+#menuList {
+    border-top: none;
 }
 
 nav li {
@@ -71,6 +105,7 @@ nav a:hover {
 
 footer {
     position: absolute;
+    right: 50px;
     bottom: 0;
     padding: 20px;
     color: rgb(156, 156, 156);

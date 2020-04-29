@@ -15,6 +15,15 @@ let userName
 const videos = [
     
     {
+        course: 'Online Gallery (Under Construction...)',
+        title: 'Online Gallery (Under Construction...)',
+        url: 'https://www.youtube.com/embed/0cxRveJYnxo',
+        week: '16' 
+    }
+]
+
+const archivedVideos = [
+    {
         course: 'Building a Personal Webiste',
         title: 'Creating a Design Portfolio',
         url: 'https://www.youtube.com/embed/0cxRveJYnxo',
@@ -31,10 +40,7 @@ const videos = [
         title: 'Assignment: Create Your Website',
         url: "./assignment.html",
         week: '14' 
-    }
-]
-
-const archivedVideos = [
+    },
     {
         course: 'Responsive Design and Mobile UI',
         title: 'Lecture: Responsive Design and Mobile UI',

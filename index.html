@@ -11,25 +11,25 @@
 
 <body>
     <nav class="nav-mobile">
-        
-        <div id="courseTitle">
+        <div id="courseTitle" class="course-list">
             <h2>ART 385 OnLine</h2>
             <p>Instructor: Aaron Yang</p>
         </div>
         
-        <ul id="menuList">
-            <p class="list-title">This Week</p>
-        </ul>
-        
-        <ul id="archive">
-            <p class="list-title">Archive</p>
-        </ul>
-        
-        <ul>
+        <div id="menus" class="course-list">
+            
+            <ul id="menuList">
+                <p class="list-title">This Week</p>
+            </ul>
+            
+            <ul id="archive">
+                <p class="list-title">Archive</p>
+            </ul>
+        </div>
+        <ul id="externalLinks" class="course-list">
             <li class="external-links"><a href="https://blackboard.ndus.edu/" target="_blank">Blackboard</a></li>
             <li class="external-links"><a href="mailto:zhenhua.yang.1@ndsu.edu">Contact Instructor</a></li>
-        </ul>
-        <footer>&copy; Copyright 2020 Aaron Yang. All right reserved. <br>Last update: 04/14/2020, v0.2</footer>
+        </ul>   
     </nav>
     <i class="fa fa-bars fa-lg" id="btnBar"></i>
     <!-- <i class="fa fa-times fa-lg" id="btnClose"></i> -->
@@ -50,6 +50,8 @@
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
+
+    <footer>&copy; Copyright 2020 Aaron Yang. All right reserved. <br>Last update: 04/14/2020, v0.2</footer>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
