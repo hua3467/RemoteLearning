@@ -25,6 +25,7 @@ nav{
 
 .course-list {
     position: absolute;
+    padding-right: 8px;
 }
 
 #menus {
