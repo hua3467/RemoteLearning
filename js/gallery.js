@@ -64,8 +64,10 @@ uiux_info.forEach( (info) => {
                 <a 
                 href=${info.prototype_web} 
                 class="btn" 
-                target=${info.prototype_web==="#"?"":"_blank"}>Try Website</a>
-                <a href=${info.prototype_mobile} class="btn" target="_blank">Try Mobile</a>
+                target="_blank"
+                ${info.prototype_web==="#"?"style='visibility: hidden'":""}
+                >Try Website</a>
+                <a href=${info.prototype_mobile} class="btn" target="_blank">Try Mobile App</a>
             </li>\n`
      
 })
