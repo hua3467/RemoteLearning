@@ -11,6 +11,8 @@ html {
 }
 body {
     background-color: black;
+}
+main {
     max-width: 1200px;
     margin: auto;
 }
@@ -20,32 +22,92 @@ li {
 a {
     text-decoration: none;
 }
-.work-list {
+
+
+/* nav bar */
+nav {
+    height: 56px;
+    position: fixed;
+    background-color: rgb(38, 39, 40);
+    top: 0;
+    width: 100%;
+    display: flex;
+    z-index: 10;
+}
+nav ul {
+    height: 56px;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+}
+nav li {
+    padding-top: 20px;
+}
+nav a{
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+
+
+/* Cards of the student work: */
+.card {
     height: 240px;
     width: 200px;
-    background-color: white;
-    margin: 10px;
+    background-color: rgb(206, 206, 206);
+    margin: 6px;
     float: left;
+    position: relative;
+    text-align: center;
+    transition: 0.5s;
+    box-shadow: 1px 4px 20px rgba(0,0,0,0.4);
+    border-radius: 6px;
+    overflow: hidden;
 }
-.work-list h3 {
+
+.card:hover {
+    transform: scale(1.1);
+    z-index: 9;
+}
+
+.links {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    padding-top: 8px;
+}
+.links p {
+    width: 100%;
+    text-align: center;
     color: black;
+}
+.card h3 {
+    color: black;
+    margin-top: 12px;
 }
 .btn {
     display: block;
     border: 1px solid black;
     color: black;
     text-align: center;
-    width: 90%;
+    width: 40%;
     padding-top: 10px;
     padding-bottom: 10px;
     margin: 10px auto;
+    font-size: 0.75rem;
+    float: left;
+    margin-left: 6%;
+    border-radius: 20px;
+}
+.btn:hover {
+    background-color: rgba(0, 0, 0, 0.137);
 }
 section ul {
     margin-top: 40px;
 }
-main {
 
-}
 section {
     clear: left;
     position: relative;

@@ -51,7 +51,7 @@ const uiux_info = [
 ]
 
 const classes = {
-    workList: 'work-list',
+    card: 'card',
     active: 'active'
 };
 let workList = '';
@@ -59,17 +59,19 @@ let workList = '';
 const uiux_list = document.querySelector('#uiuxList');
 
 uiux_info.forEach( (info) => {
-    workList += `<li class=${classes.workList}>
+    workList += `<li class=${classes.card}>
                 <h3>${info.title}</h3>
-                <a 
-                href=${info.prototype_web} 
-                class="btn" 
-                target="_blank"
-                ${info.prototype_web==="#"?"style='visibility: hidden'":""}
-                >Try Website</a>
-                <a href=${info.prototype_mobile} class="btn" target="_blank">Try Mobile App</a>
-            </li>\n`
+                <div class="links">
+                    <p>Try Prototypes:</p>
+                    <a 
+                    href=${info.prototype_web} 
+                    class="btn" 
+                    target="_blank"
+                    ${info.prototype_web==="#"?"style='visibility: hidden'":""}
+                    >Website</a>
+                    <a href=${info.prototype_mobile} class="btn" target="_blank">Mobile App</a>
+                </div>
+            </li>\n`;
      
 })
-console.log(workList);
 uiux_list.innerHTML = workList;
