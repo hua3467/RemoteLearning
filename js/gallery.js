@@ -33,7 +33,7 @@ const uiux_info = [
         id: 'ui_3'
     },
     {
-        url: '',
+        url: 'https://thegrid.things2build.com',
         prototype_web: 'https://xd.adobe.com/view/fc75d45f-1f6d-4575-53b5-aa051982e102-8a44/?fullscreen&hints=on',
         prototype_mobile: 'https://xd.adobe.com/view/92819fd1-da61-4684-66f2-03a02bf42a5b-e4b0/',
         title: 'GRID',
@@ -87,18 +87,22 @@ let workList = '';
 const uiux_list = document.querySelector('#uiuxList');
 
 uiux_info.forEach( (info) => {
-    workList += `<li class=${classes.card} id=${info.id}>
-                <div class="links">
-                    <p>Try Prototypes:</p>
-                    <a 
-                    href=${info.prototype_web} 
-                    class="btn" 
-                    target="_blank"
-                    ${info.prototype_web==="#"?"style='visibility: hidden'":""}
-                    >Website</a>
-                    <a href=${info.prototype_mobile} class="btn" target="_blank">Mobile App</a>
-                </div>
-            </li>\n`;
+    workList += `<li class=${classes.card}>
+                    
+                    <div class="cover-image" id=${info.id}>
+                        <h3>View Project</h3>
+                    </div>
+                    <div class="links">
+                        <p>Try Prototypes:</p>
+                        <a 
+                        href=${info.prototype_web} 
+                        class="btn" 
+                        target="_blank"
+                        ${info.prototype_web==="#"?"style='visibility: hidden'":""}
+                        >Website</a>
+                        <a href=${info.prototype_mobile} class="btn" target="_blank">Mobile App</a>
+                    </div>
+                </li>\n`;
     
 })
 uiux_list.innerHTML = workList;
@@ -110,9 +114,20 @@ uiux_info.forEach( (info) => {
     currentCard.addEventListener('click', () => {
         if(info.url !== ''){
             window.open(info.url, '_blank');
-        } else {
-            alert('Still working. Please try other projects.')
         }
         
+    })
+    currentCard.addEventListener('mouseenter', (e) => {
+        if(info.url !== ''){
+            e.target.childNodes[1].style.visibility = 'visible';
+            e.target.style.filter = 'grayscale(50%)';
+            e.target.style.cursor = 'pointer';
+        }
+    })
+    currentCard.addEventListener('mouseleave', (e) => {
+        if(info.url !== ''){
+            e.target.childNodes[1].style.visibility = 'hidden';
+            e.target.style.filter = 'grayscale(0%)';
+        }
     })
 })
