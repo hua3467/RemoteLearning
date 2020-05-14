@@ -1,23 +1,23 @@
 const uiux_info = [
     {
-        url: '',
+        url: 'https://xd.adobe.com/view/22a417a5-1d99-46f8-7c6d-f3d4d7ccff13-5495/?fullscreen',
         prototype_web: 'https://xd.adobe.com/view/f5aa7e79-58e2-406a-78b0-7ec53b65a4c9-839b/?fullscreen&hints=on',
         prototype_mobile: 'https://xd.adobe.com/view/59fe00a5-299e-4f7e-5508-4a9964854f09-2fcf/?fullscreen&hints=on',
         title: 'JoCo',
         authors: ['Cody Larson', 'Jodi Claflin'],
         images: {
-            cover: '../images/Cover_JoCo.jpg'
+            cover: 'http://students.cs.ndsu.nodak.edu/~aayang/RemoteLearning/images/Cover_JoCo.jpg'
         },
         id: 'ui_1'
     },
     {
-        url: '',
+        url: 'https://sites.google.com/ndsu.edu/movieknight',
         prototype_web: 'https://xd.adobe.com/view/616d7aa2-3d7c-4bf7-49ee-c77599d724c8-175c/?fullscreen&hints=on',
         prototype_mobile: 'https://xd.adobe.com/view/04ab066b-0957-4622-7a5e-c3948d289747-729a/',
         title: 'Movie Knight',
         authors: ['Andrew Stoffel', 'Sara Lundy', 'Cassidy Brown', 'Ben Reyes'],
         images: {
-            cover: '../images/cover_MovieKnight.jpg'
+            cover: 'http://students.cs.ndsu.nodak.edu/~aayang/RemoteLearning/images/cover_MovieKnight.jpg'
         },
         id: 'ui_2'
     },
@@ -28,7 +28,7 @@ const uiux_info = [
         title: 'Crisp Finds',
         authors: ['Ava Martinsen', 'Ryan Lebsch', 'Keeley Watson'],
         images: {
-            cover: '../images/cover_CrispFinds.jpg'
+            cover: 'http://students.cs.ndsu.nodak.edu/~aayang/RemoteLearning/images/cover_crispfinds.jpg'
         },
         id: 'ui_3'
     },
@@ -39,29 +39,29 @@ const uiux_info = [
         title: 'GRID',
         authors: ['Jonathon Dalton', 'Charles Biggs'],
         images: {
-            cover: '../images/cover_grid.jpg'
+            cover: 'http://students.cs.ndsu.nodak.edu/~aayang/RemoteLearning/images/cover_grid.jpg'
         },
         id: 'ui_4'
     },
     {
-        url: '',
+        url: 'https://baileycowling5.wixsite.com/mysite',
         prototype_web: 'https://xd.adobe.com/view/73f0360c-9974-4292-70a5-566de4693276-05c1/?fullscreen&hints=on',
         prototype_mobile: 'https://xd.adobe.com/view/8a5fb792-0691-4f66-6d17-9ef4cefa9eca-fc6e/screen/a104e736-d64c-4a1c-bd05-561c7da54009/Home-Page',
-        title: 'What\'s For Lunch',
+        title: 'BENZ BURGERS',
         authors: ['Benjamin Swenson', 'Anh Tao', 'Bailey Cowling'],
         images: {
-            cover: '../images/cover_WhatsLunch.jpg'
+            cover: 'http://students.cs.ndsu.nodak.edu/~aayang/RemoteLearning/images/cover_WhatsLunch.jpg'
         },
         id: 'ui_5'
     },
     {
-        url: '',
+        url: 'https://xd.adobe.com/view/ae325ae4-51f9-4625-4298-6a8efb83ef0c-d803/?fullscreen',
         prototype_web: 'https://xd.adobe.com/view/f672c16e-91c6-4403-4595-d884f5755843-8043/?fullscreen&hints=on',
         prototype_mobile: 'https://xd.adobe.com/view/4bbb420c-12f7-46a1-7dd7-00d030845ec6-3d8a/?fullscreen&hints=on',
         title: 'Hebo',
         authors: ['Izak Moleterno', 'Jacob Schwitalla', 'Elizabeth Hurteau'],
         images: {
-            cover: '../images/cover_Hebo.jpg'
+            cover: 'http://students.cs.ndsu.nodak.edu/~aayang/RemoteLearning/images/cover_Hebo.jpg'
         },
         id: 'ui_6'
     },
@@ -72,7 +72,7 @@ const uiux_info = [
         title: 'Food Eats',
         authors: ['Ashlyn Dilley', 'Cassandra Tweed', 'Josephine Linehan'],
         images: {
-            cover: '../images/cover_FoodEats.jpg'
+            cover: 'http://students.cs.ndsu.nodak.edu/~aayang/RemoteLearning/images/cover_FoodEats.jpg'
         },
         id: 'ui_7'
     },
