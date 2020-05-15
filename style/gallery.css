@@ -8,6 +8,7 @@
 }
 html {
     font-family: Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 body {
     background-color: rgb(28, 28, 28);
@@ -48,7 +49,7 @@ nav li {
 }
 nav a{
     color: white;
-    padding: 10px 20px;
+    padding: 15px 20px;
     text-align: center;
 }
 
@@ -127,7 +128,6 @@ header h1 {
     top: 0;
     z-index: 10;
     font-size: 1rem;
-    font-weight: 300;
     width: 100%;
     text-align: center;
     background-color: rgba(0, 5, 150, 0.461);
@@ -168,4 +168,11 @@ section {
 }
 section .title {
     text-align: center;
+}
+
+/* activities */
+.active-nav {
+    background-color: #6324c9;
+    color: aliceblue;
+    border-bottom: 4px solid #9c64f7;
 }
