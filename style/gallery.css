@@ -32,6 +32,13 @@ footer {
     margin-top: 100px;
     color: rgb(111, 106, 120);
 }
+#logo {
+    text-align: center;
+}
+#logo img{
+    width: 20%;
+    min-width: 300px;
+}
 
 /* nav bar */
 nav {
