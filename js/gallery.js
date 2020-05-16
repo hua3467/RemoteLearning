@@ -131,3 +131,51 @@ uiux_info.forEach( (info) => {
         }
     })
 })
+
+// update nav status
+const navItems = document.querySelectorAll('nav a');
+
+const uiux = document.querySelector('#uiux');
+const graphic = document.querySelector('#graphic');
+const drawing = document.querySelector('#drawing');
+
+navItems.forEach((link) => {
+    activeTab(link);
+})
+
+window.addEventListener( 'scroll', () => {
+    
+    if(window.scrollY >= uiux.offsetTop - 100 && window.scrollY < graphic.offsetTop - 160){
+        
+        navItems.forEach((item) => {
+            item.classList.remove('active-nav');
+        });
+        navItems[0].classList.add('active-nav');
+
+    } else if (window.scrollY >= graphic.offsetTop - 160 && window.scrollY < drawing.offsetTop - 160){
+        navItems.forEach((item) => {
+            item.classList.remove('active-nav');
+        });
+        navItems[1].classList.add('active-nav');
+
+    } else if (window.scrollY >= drawing.offsetTop - 160){
+        navItems.forEach((item) => {
+            item.classList.remove('active-nav');
+        });
+        navItems[2].classList.add('active-nav');
+
+    } else {
+        navItems.forEach((item) => {
+            item.classList.remove('active-nav');
+        });
+    }
+})
+
+function activeTab(element){
+    element.addEventListener( 'click', (e) => {
+        navItems.forEach((item) => {
+            item.classList.remove('active-nav');
+        });
+        e.target.classList.add('active-nav');
+    })
+}
