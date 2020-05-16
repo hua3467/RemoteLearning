@@ -26,7 +26,12 @@ h1 {
 a {
     text-decoration: none;
 }
-
+footer {
+    height: 40px;
+    text-align: center;
+    margin-top: 100px;
+    color: rgb(111, 106, 120);
+}
 
 /* nav bar */
 nav {
@@ -154,9 +159,9 @@ header h1 {
 section ul {
     margin-top: 40px;
     display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
 }
 
 section {
@@ -165,9 +170,54 @@ section {
     display: block;
     height: auto;
     padding-top: 100px;
+    margin-bottom: 40px;
 }
 section .title {
     text-align: center;
+}
+section .instructor {
+    text-align: center;
+    padding: 20px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.434);
+}
+
+/* Lightbox */
+#lightbox {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    visibility: hidden;
+}
+.icon {
+    height: 50px;
+    width: 50px;
+    color: white;
+    z-index: 12;
+    margin: 20px;
+    cursor: pointer;
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.459);
+}
+#close {
+    position: absolute;
+    right: 0;
+}
+.arrows {
+    position: absolute;
+    top: 50%;
+}
+#leftArrow {
+    left: 0;
+}
+#rightArrow {
+    right: 0;
 }
 
 /* activities */
@@ -176,3 +226,8 @@ section .title {
     color: aliceblue;
     border-bottom: 4px solid #9c64f7;
 }
+
+.stop-scrolling { 
+    height: 100%; 
+    overflow: hidden; 
+} 
