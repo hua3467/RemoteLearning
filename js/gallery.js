@@ -1,4 +1,4 @@
-const url = 'https://raw.githubusercontent.com/hua3467/RemoteLearning/master/objects/data.json';
+const dataURL = 'https://raw.githubusercontent.com/hua3467/RemoteLearning/master/objects/data.json';
 const uiux_list = document.querySelector('#uiuxList');
 const classes = {
     card: 'card',
@@ -7,12 +7,12 @@ const classes = {
 
 let workList = '';
 
-fetch(url)
+fetch(dataURL)
 .then(response => {
     return response.json();
 })
 .then( data => {
-    data.forEach( info => {
+    data.uiux.forEach( info => {
         workList += `<li class=${classes.card}>
                     
                     <div class="cover-image" id=${info.id}>
@@ -32,7 +32,7 @@ fetch(url)
     })
     uiux_list.innerHTML = workList;
 
-    data.forEach( (info) => {
+    data.uiux.forEach( (info) => {
         const currentCard = document.querySelector('#' + info.id);
         currentCard.style.backgroundImage = `url(${info.images.cover})`;
         currentCard.style.backgroundSize = 'cover';
