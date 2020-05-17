@@ -1,4 +1,4 @@
-const url = 'https://api.jsonbin.io/b/5ec08a7547a2266b1479b4be';
+const url = 'https://raw.githubusercontent.com/hua3467/RemoteLearning/master/objects/data.json';
 const uiux_list = document.querySelector('#uiuxList');
 const classes = {
     card: 'card',
@@ -7,9 +7,7 @@ const classes = {
 
 let workList = '';
 
-fetch(url, {
-    headers: {"secret-key": "$2b$10$dFdHf4TwUXPO.VlRulEXbeAkKpO1cBwmU5Fke3mK6UvguDLvtxJyy"}
-})
+fetch(url)
 .then(response => {
     return response.json();
 })
