@@ -15,7 +15,14 @@ fetch(dataURL)
     data.uiux.forEach( info => {
         workList += `<li class=${classes.card}>
                     
-                    <div class="cover-image" id=${info.id}>
+                    <div class="cover-image" 
+                        id=${info.id} 
+                        onclick="openPage('${info.url}')"
+                        onmouseenter="mouseIn(this)" 
+                        onmouseleave="mouseOut(this)" 
+                        style = "background-image: url(${info.images.cover}); 
+                        background-size: cover; 
+                        filter: grayscale(0%);">
                         <h3>View Project</h3>
                     </div>
                     <div class="links">
@@ -32,30 +39,6 @@ fetch(dataURL)
     })
     uiux_list.innerHTML = workList;
 
-    data.uiux.forEach( (info) => {
-        const currentCard = document.querySelector('#' + info.id);
-        currentCard.style.backgroundImage = `url(${info.images.cover})`;
-        currentCard.style.backgroundSize = 'cover';
-        currentCard.addEventListener('click', () => {
-            if(info.url !== ''){
-                window.open(info.url, '_blank');
-            }
-            
-        })
-        currentCard.addEventListener('mouseenter', (e) => {
-            if(info.url !== ''){
-                e.target.childNodes[1].style.visibility = 'visible';
-                e.target.style.filter = 'grayscale(50%)';
-                e.target.style.cursor = 'pointer';
-            }
-        })
-        currentCard.addEventListener('mouseleave', (e) => {
-            if(info.url !== ''){
-                e.target.childNodes[1].style.visibility = 'hidden';
-                e.target.style.filter = 'grayscale(0%)';
-            }
-        })
-    })
 })
 
 
@@ -98,6 +81,16 @@ window.addEventListener( 'scroll', () => {
     }
 })
 
+function mouseIn(e){
+    e.childNodes[1].style.visibility = 'visible';
+    e.style.filter = 'grayscale(50%)';
+    e.style.cursor = 'pointer';
+}
+function mouseOut(e){
+    e.childNodes[1].style.visibility = 'hidden';
+    e.style.filter = 'grayscale(0%)';
+}
+
 function activeTab(element){
     element.addEventListener( 'click', (e) => {
         navItems.forEach((item) => {
@@ -105,4 +98,10 @@ function activeTab(element){
         });
         e.target.classList.add('active-nav');
     })
-}
+};
+
+function openPage(url) {
+    if(url !== ''){
+        window.open(url, '_blank');
+    }
+};
